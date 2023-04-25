@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #e0f6ff);
+}
+
+.cloud1 {
+    position: absolute;
+    width: 150px;
+    left: 100px;
+}
+.cloud2 {
+    position: absolute;
+    width: 150px;
+    top: 50px;
+    right: 400px;
+}
+.cloud3 {
+    position: absolute;
+    width: 150px;
+    top: 20px;
+    right: 750px;
+}
+.cloud4 {
+    position: absolute;
+    width: 150px;
+    right: 100px;
+}
+
+.eevee {
+    position: absolute;
+    bottom: 0px;
+    right: 80px;
+    width: 90px;
+}
+
+.thunderStone {
+    position: absolute;
+    bottom: 0px;
+    width: 150px;
+    animation: stone-animation 2s infinite linear;
+}
+
+.runner {
+    width: 80px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+@keyframes stone-animation {
+    from {
+        right: -150px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 10px;
+    }
+    40% {
+        bottom: 80px;
+    }
+    50% {
+        bottom: 80px;
+    }
+    60% {
+        bottom: 80px;
+    }
+    100% {
+        bottom: 10px;
+    }
+}
